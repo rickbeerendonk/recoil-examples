@@ -22,7 +22,7 @@ const nameFirstCharState = selector({
     return get(nameState)[0];
   },
   set: ({ get, set }, newValue) =>
-    set(nameState, newValue + get(nameState).substring(1))
+    newValue && set(nameState, newValue + get(nameState).substring(1))
 });
 
 // React components
@@ -46,16 +46,22 @@ function GreetingEditor() {
 function GreetingFirstChar() {
   const [firstChar, setFirstChar] = useRecoilState(nameFirstCharState);
 
+  const inputRef = React.useRef();
+
   function handleChange(e) {
     setFirstChar(e.target.value);
   }
 
+  // Always select input value
+  React.useEffect(() => inputRef.current.select());
+
   return (
     <input
-      style={{ color: 'red' }}
-      onChange={handleChange}
-      value={firstChar}
       maxLength="1"
+      ref={inputRef}
+      style={{ color: 'red' }}
+      value={firstChar}
+      onChange={handleChange}
     />
   );
 }
