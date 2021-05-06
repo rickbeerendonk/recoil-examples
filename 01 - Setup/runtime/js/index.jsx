@@ -5,7 +5,7 @@
 
 // Imports
 
-const { RecoilRoot, atom, useRecoilState } = Recoil;
+const { RecoilRoot, atom, useRecoilValue } = Recoil;
 
 // Create Recoil Atom(s)
 
@@ -16,26 +16,15 @@ const nameState = atom({
 
 // React components
 
-function GreetingEditor() {
-  // Like useState() hook from React, only state is shareable between componenst
-  const [name, setName] = useRecoilState(nameState);
+function Greeting() {
+  const name = useRecoilValue(nameState);
 
-  function handleChange(e) {
-    setName(e.target.value);
-  }
-
-  return (
-    <React.Fragment>
-      <input autoFocus onChange={handleChange} value={name} />
-      <h1>Hello {name}!</h1>
-    </React.Fragment>
-  );
+  return <h1> Hello {name}!</h1>;
 }
-
 function App() {
   return (
     <RecoilRoot>
-      <GreetingEditor />
+      <Greeting />
     </RecoilRoot>
   );
 }
