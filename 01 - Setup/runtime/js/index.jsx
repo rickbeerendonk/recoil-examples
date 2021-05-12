@@ -21,6 +21,7 @@ function Greeting() {
 
   return <h1> Hello {name}!</h1>;
 }
+
 function App() {
   return (
     <RecoilRoot>
