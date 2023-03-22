@@ -3,11 +3,11 @@
   "env": {
     "browser": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "node": true
   },
-  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -24,8 +24,9 @@
     "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react/no-did-mount-set-state": 2,
     "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": 2,
-    "react-hooks/exhaustive-deps": [
+    "react-hooks/exhaustive-deps":[
       1,
       {
         "additionalHooks": "useRecoilCallback"
@@ -36,7 +37,7 @@
   },
   "settings": {
     "react": {
-      "version": "17.0.1"
+      "version": "18.2.0"
     }
   }
 }

@@ -39,4 +39,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
