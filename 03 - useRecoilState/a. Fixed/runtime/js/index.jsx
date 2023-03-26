@@ -17,7 +17,7 @@ const nameState = atom({
 // React components
 
 function GreetingEditor() {
-  // Like useState() hook from React, only state is shareable between componenst
+  // Like useState() hook from React, only state is shareable between components
   const [name, setName] = useRecoilState(nameState);
 
   function handleChange(e) {
