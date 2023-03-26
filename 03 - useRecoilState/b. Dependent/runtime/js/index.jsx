@@ -24,11 +24,7 @@ function Counter() {
     setCount(c => c + 1);
   }
 
-  return (
-    <React.Fragment>
-      <button onClick={handleClick}>We have clicked {count} times.</button>
-    </React.Fragment>
-  );
+  return <button onClick={handleClick}>We have clicked {count} times.</button>;
 }
 
 function App() {
