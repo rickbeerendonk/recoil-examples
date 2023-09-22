@@ -23,10 +23,12 @@
     "eslint-fix": "eslint . --ext .js,.jsx,.mjs --cache --fix",
     "prettier": "prettier --list-different '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
     "prettier-fix": "prettier --write '**/*.{json,js,jsx,html,md,mjs,mts,ts,tsx}'",
-    "start": "node \"./Util - 01 - Custom servers/server.js\" 8040",
+    "start": "node ./server/server.js",
     "validate": "npm run eslint && npm run prettier"
   },
   "devDependencies": {
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
     "eslint": "8.36.0",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
@@ -41,6 +43,7 @@
     "@babel/preset-react": "7.18.6",
     "@babel/standalone": "7.21.3",
     "core-js": "3.29.1",
+    "esbuild": "0.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "0.7.7",
