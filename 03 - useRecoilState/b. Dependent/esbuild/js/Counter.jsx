@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil';
 import { countState } from './atoms.js';
 
 function Counter() {
-  // Like useState() hook from React, only state is shareable between componenst
+  // Like useState() hook from React, only state is shareable between components
   const [count, setCount] = useRecoilState(countState);
 
   function handleClick() {
