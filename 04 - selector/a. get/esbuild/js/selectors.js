@@ -7,7 +7,5 @@ import { nameState } from './atoms.js';
 
 export const nameFirstCharState = selector({
   key: 'nameFirstCharState',
-  get: ({ get }) => {
-    return get(nameState)[0];
-  }
+  get: opts => opts.get(nameState)[0]
 });
