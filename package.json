@@ -1,17 +1,17 @@
 {
-  "name": "react-examples",
+  "name": "recoil-examples",
   "version": "1.0.0",
-  "description": "Examples for [React](http://reactjs.com) and [ReactJS.NET](http://reactjs.net/).",
+  "description": "Examples for [Recoil](https://recoiljs.org/).",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rickbeerendonk/react-examples.git"
+    "url": "git+https://github.com/rickbeerendonk/recoil-examples.git"
   },
   "author": "Rick Beerendonk",
   "license": "EUPL-1.2",
   "bugs": {
-    "url": "https://github.com/rickbeerendonk/react-examples/issues"
+    "url": "https://github.com/rickbeerendonk/recoil-examples/issues"
   },
-  "homepage": "https://github.com/rickbeerendonk/react-examples#readme",
+  "homepage": "https://github.com/rickbeerendonk/recoil-examples#readme",
   "husky": {
     "hooks": {
       "pre-commit": "npm run validate"
